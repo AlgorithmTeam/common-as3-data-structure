@@ -1,12 +1,14 @@
 package common.data.structure.linkList
 {
-	/**
+    import common.data.structure.Iterator;
+
+    /**
 	 *
 	 * 创建者：njw
 	 * 修改者：Ray Yee
 	 * 说明：双向链表 (为加快查询速度，可以额外再用HashMap保存节点）
 	 */
-	public class DoubleLinkList implements ILinkList
+	public class DoubleLinkList implements Iterator
 	{
 		/*
 		* 索引从0开始 ,所有对节点间的操作都应由链表自行管理
@@ -27,8 +29,23 @@ package common.data.structure.linkList
 //			m_LastNode	= node;
 //			m_Length = 1;
 		}
-		
-		public function getLength():int
+
+        public function get hasNext():Boolean
+        {
+            return m_Length > 0;
+        }
+
+        public function get first():*
+        {
+            return getNode(0);
+        }
+
+        public function get next():*
+        {
+            return popNode();
+        }
+
+        public function getLength():int
 		{
 			return 	m_Length;
 		}

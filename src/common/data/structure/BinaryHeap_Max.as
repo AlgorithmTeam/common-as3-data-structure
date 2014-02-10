@@ -10,7 +10,7 @@ package common.data.structure
      * 最大堆性质，且可用于优先级队列
      * @author rayyee
      */
-    public class BinaryHeap_Max implements Iterator
+    final public class BinaryHeap_Max implements Iterator
     {
         /**
          * 用来判断值大小的属性
