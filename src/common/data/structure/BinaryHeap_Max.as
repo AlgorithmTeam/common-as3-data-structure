@@ -33,6 +33,7 @@ package common.data.structure
         public function BinaryHeap_Max( field:String = "" )
         {
             if ( field != "" ) _sType = field;
+            _aSource = [];
         }
 
         /**
@@ -103,7 +104,6 @@ package common.data.structure
         public function buildMaxHeap( value:Array, type:String = "" ):void
         {
             if ( type != "" ) _sType = type;
-            _aSource = [];
             _aSource = _aSource.concat( value );
             _iHeapSize = _aSource.length - 1;
             for ( var i:int = ((_aSource.length - 1) >> 1) >> 0; i > -1; i -= 1 )
