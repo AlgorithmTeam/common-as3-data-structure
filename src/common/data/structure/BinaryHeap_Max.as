@@ -10,7 +10,7 @@ package common.data.structure
      * 最大堆性质，且可用于优先级队列
      * @author rayyee
      */
-    final public class BinaryHeap_Max implements Iterator
+    final public class BinaryHeap_Max
     {
         /**
          * 用来判断值大小的属性
@@ -188,23 +188,9 @@ package common.data.structure
             return _iHeapSize;
         }
 
-        /**
-         * 迭代器
-         */
-        public function get first():*
+        public function isDone():Boolean
         {
-            //getMax();
-            return _aSource[0];
-        }
-
-        public function get next():*
-        {
-            return extract();
-        }
-
-        public function get hasNext():Boolean
-        {
-            return _iHeapSize >= 0;
+            return _iHeapSize < 0;
         }
 
     }
